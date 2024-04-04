@@ -3,12 +3,10 @@ public class MergeArrays {
         int m = X.length;
         int n = Y.length;
 
-        // Find the index of last non-zero element in X[]
         int lastIndex = m - 1;
         while (lastIndex >= 0 && X[lastIndex] == 0)
             lastIndex--;
 
-        // Merge X[] and Y[] by placing elements from Y[] in correct position in X[]
         int i = lastIndex;
         int j = n - 1;
         int k = m - 1;
@@ -24,7 +22,6 @@ public class MergeArrays {
             k--;
         }
 
-        // If elements from Y[] are still remaining
         while (j >= 0) {
             X[k] = Y[j];
             j--;
@@ -38,7 +35,6 @@ public class MergeArrays {
 
         mergeArrays(X, Y);
 
-        // Print the merged array
         System.out.print("Merged array: ");
         for (int num : X) {
             System.out.print(num + " ");
